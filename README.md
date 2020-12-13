@@ -30,7 +30,7 @@
     - Docker
     
     
-  ##DOCKER - Como construir e executar um projeto
+  ## DOCKER - Como construir e executar um projeto
   
   - Para construir um projeto com docker, cria-se um documento chamado **Dockerfile** na pasta raiz do projeto. Nesse arquivo, colocasse alguns parametros como _FROM_, _RUN_, ... entre outros.
   Já com a aplicação construída e com o Dockerfile feito, exectuta o comando __docker build -t "nome" .__ , para que seja gerado o executável da aplicação. Em seguida, é necessário fazer login no __Dockerhub__ para que a imagem criada seja armazenada.
