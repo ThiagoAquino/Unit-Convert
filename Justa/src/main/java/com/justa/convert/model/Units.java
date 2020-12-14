@@ -12,22 +12,12 @@ public class Units {
     public Units(String unit_name, BigDecimal multiplication_factor) {
         this.unit_name = unit_name;
         this.multiplication_factor = multiplication_factor;
-        System.out.println(unit_name);
-        System.out.println(multiplication_factor);
     }
 
     public Units() {
     }
 
     public Units ConvertUnits(String units) throws Exception {
-        dataProcess(units);
-        System.out.println("unit_name : " + this.unit_name);
-        System.out.println("multiplication_factor : " + this.multiplication_factor);
-        return new Units(this.unit_name, this.multiplication_factor);
-    }
-
-
-    private void dataProcess(String units) throws Exception {
         if (units.isEmpty() || units.isBlank() || units == null) {
             throw new Exception("you passed a invalid string");
         } else {
@@ -66,6 +56,8 @@ public class Units {
             expression.setPrecision(18);
             this.multiplication_factor = expression.eval();
         }
+
+        return new Units(this.unit_name, this.multiplication_factor);
     }
 
 
